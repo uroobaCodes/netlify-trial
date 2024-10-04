@@ -1,0 +1,16 @@
+{
+  "name": "netlify-trial",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run-script",
+    "dev": "netlify dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  }
+}

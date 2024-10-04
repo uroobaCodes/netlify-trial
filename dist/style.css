@@ -1,0 +1,147 @@
+body {
+    box-sizing: border-box;
+}
+
+.my-address {
+    height: 50px;
+    width: 500px;
+    border: 1px solid red;
+
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+    margin-top: 40px;
+}
+
+.weather-box{
+    /* height: 400px; */
+    width: 400px;
+    border: 1px solid seagreen;
+    margin-top: 30px;
+
+}
+
+.hour-container {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(238, 235, 235);
+    /* border: 1px solid black; */
+    /* background: url(carousel.jpg); */
+    /* background-repeat: no-repeat; */
+
+    /* center horiontally and verticaly  */
+    /* background-position: center center; */
+
+    /* background-size: cover; */
+
+    /* shorthand repeat, position, size*/
+    /* background: url() no-repeat center center / cover */
+
+    position: relative;
+    height: 30vh;
+    width: 60vw;
+    /* padding-left: 30px;
+    padding-right: 30px; */
+    /* we are already hiding the scrollbar heres */
+    overflow: hidden;
+}
+
+/* we cannot have width 100% and set left and right properties because width wont allow
+so we need to remove width to all for left and right property */
+
+.tfour_hours{
+    
+    height: 100%;
+    /* width: 100%; */
+    margin: 0;
+    box-sizing: border-box;
+    /* width: auto; */
+    /* this allows horizontal scrolling if items dont fit */
+    /* nope it just gave an unwanted scroll bar */
+    /* overflow-x: scroll;  */
+    /* hide scroll bar instead */
+    display: flex;
+    position: absolute;
+    /* inset: 0;
+    margin: auto; */
+    right: 5%;
+    left: 5%;
+    top: 5%;
+    bottom: 5%;
+    z-index: 0;
+    transition: all 2s linear;
+}
+
+
+.default-msg{
+    justify-self: center;
+    align-self: center;
+}
+
+.child {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: calc(100% / 2 - 5px); /* Show 3 items at a time; adjust as needed */
+    height: 90%; /* Adjust as needed */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-right: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* backdrop-filter: blur(10px); */
+}
+
+@media screen and (min-width: 500px) {
+    .child {
+        margin-right: 10px;
+        width: calc(100% / 3 - 10px); 
+        box-sizing: border-box;
+    }
+}
+
+.btn {
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+}
+
+.btn-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.hour-header {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(238, 235, 235);
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    width: 60vw;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* box-shadow: 0px 5px 5px rgb(186, 185, 185); */
+}
+
+.header {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.line {
+    height: 0.5px;
+    background-color: rgb(163, 159, 159);
+}
