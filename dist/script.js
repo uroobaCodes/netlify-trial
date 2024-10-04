@@ -22,7 +22,7 @@ async function success(position) {
 
     try {
         // Send the coordinates to the Netlify function
-        const response = await fetch('http://localhost:8888/.netlify/functions/getData', {
+        const response = await fetch('/.netlify/functions/getData', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ latitude, longitude }),
